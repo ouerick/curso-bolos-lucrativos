@@ -4,71 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Curso de Bolos Caseiros</title>
+<title>Curso de Bolos</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Inter',sans-serif;
-  background:#fff;
-  color:#222;
-  line-height:1.6;
+  background:#e9d6da;
+  color:#4a3a3a;
 }
 
 /* ===== CONTAINER ===== */
-.container{
-  max-width:1100px;
+.section{
+  max-width:1200px;
   margin:auto;
-  padding:60px 20px;
+  padding:80px 20px;
 }
 
 /* ===== HERO ===== */
 .hero{
   display:flex;
-  gap:40px;
   align-items:center;
+  justify-content:space-between;
+  gap:60px;
   flex-wrap:wrap;
 }
 
-.hero-text{flex:1;}
+.hero-text{
+  flex:1;
+}
 
-.hero h1{
+.hero-text h1{
   font-family:'Playfair Display',serif;
-  font-size:2.8rem;
+  font-size:3rem;
   line-height:1.2;
-  margin-bottom:20px;
-}
-
-.highlight{
-  color:#ff4f7a;
-}
-
-.hero p{
-  font-size:1.1rem;
   margin-bottom:25px;
 }
 
-/* ===== VIDEO ===== */
-.video{
-  flex:1;
-  border-radius:14px;
-  overflow:hidden;
+.hero-text h1 span{
+  color:#e84a78;
+  font-style:italic;
+}
+
+.hero-text p{
+  font-size:1.15rem;
+  line-height:1.8;
+  margin-bottom:20px;
+  max-width:550px;
+}
+
+/* ===== IMAGENS ===== */
+.hero-images{
+  display:flex;
+  gap:25px;
+}
+
+.hero-images img{
+  width:260px;
+  border-radius:18px;
   box-shadow:0 20px 40px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.hero-images img:hover{
+  transform:translateY(-5px);
 }
 
 /* ===== BOTÃO ===== */
 .btn{
+  margin-top:20px;
   display:inline-block;
-  background:#27ae60;
+  background:#2ecc71;
   color:#fff;
-  padding:16px 32px;
-  border-radius:10px;
+  padding:14px 35px;
+  border-radius:12px;
   text-decoration:none;
-  font-weight:600;
+  font-weight:500;
   position:relative;
 }
 
@@ -77,83 +96,73 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  border-radius:10px;
-  box-shadow:0 0 20px #27ae60;
-  animation:glow 1.8s infinite;
+  border-radius:12px;
+  box-shadow:0 0 20px #2ecc71;
+  opacity:0.7;
+  animation:glow 2s infinite;
 }
 
 @keyframes glow{
-  0%{opacity:.3}
+  0%{opacity:0.4}
   50%{opacity:1}
-  100%{opacity:.3}
+  100%{opacity:0.4}
 }
 
-/* CTA FIXO */
-.cta-fixed{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:999;
-}
-
-/* ===== SEÇÃO ===== */
-.section{
-  padding:80px 20px;
-}
-
-.section h2{
-  font-family:'Playfair Display',serif;
-  font-size:2rem;
-  margin-bottom:20px;
-}
-
-/* ===== BENEFÍCIOS ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* ===== CARROSSEL ===== */
-.carousel{
+/* ===== SEÇÕES IGUAIS AO ESTILO ===== */
+.block{
   display:flex;
-  gap:15px;
-  overflow-x:auto;
+  gap:60px;
+  align-items:center;
+  margin-top:80px;
+  flex-wrap:wrap;
 }
 
-.carousel img{
-  height:220px;
-  border-radius:12px;
+.block img{
+  width:320px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* ===== DEPOIMENTOS ===== */
-.testimonial{
-  font-size:0.95rem;
-  color:#444;
+.block-text{
+  flex:1;
 }
 
-/* ===== FAQ ===== */
-.faq-item{
-  margin-bottom:10px;
-  cursor:pointer;
+.block-text h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;
+  margin-bottom:15px;
 }
 
-.faq-answer{
-  display:none;
-  font-size:0.9rem;
+.block-text p{
+  font-size:1.1rem;
+  line-height:1.7;
+}
+
+/* ===== ANIMAÇÃO AO ROLAR ===== */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.6s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* ===== RESPONSIVO ===== */
 @media(max-width:900px){
-  .hero{flex-direction:column;}
-  .hero h1{font-size:2rem;}
+  .hero{
+    flex-direction:column;
+  }
+
+  .hero-images{
+    justify-content:center;
+  }
+
+  .hero-text h1{
+    font-size:2.2rem;
+  }
 }
 
 </style>
@@ -161,122 +170,82 @@ body{
 
 <body>
 
-<!-- CTA FIXO -->
-<a href="https://go.hotmart.com/P104878402Q?ap=3bac" class="btn cta-fixed">Quero garantir acesso</a>
-
 <!-- HERO -->
-<div class="container hero">
+<div class="section hero fade">
 
 <div class="hero-text">
 
 <h1>
-Você não precisa ser confeiteira para começar a <span class="highlight">ganhar dinheiro com bolos</span>
+Eu sei como é querer mudar de vida, mas não saber <span>por onde começar</span>
 </h1>
 
 <p>
-Mesmo que hoje você não saiba por onde começar, existe um caminho simples que pode te levar do zero até suas primeiras vendas — usando apenas o que você já tem em casa.
+Assim como você, eu também comecei sem experiência nenhuma na cozinha.
+Errei muitas receitas, me frustrei e pensei em desistir.
+Mas decidi continuar e, com prática e dedicação, descobri que fazer bolos era mais do que um hobby.
+</p>
+
+<p>
+Hoje, ensino outras mulheres a trilharem esse mesmo caminho.
+Esse curso é o resultado de tudo que aprendi.
 </p>
 
 <a href="https://go.hotmart.com/P104878402Q?ap=3bac" class="btn">Quero começar agora</a>
 
 </div>
 
-<div class="video">
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qU2pQLMODNw" frameborder="0" allowfullscreen></iframe>
-</div>
-
-</div>
-
-<!-- BENEFÍCIOS -->
-<div class="container section">
-
-<h2>O que você vai aprender</h2>
-
-<div class="grid">
-
-<div class="card">Receitas simples e práticas para começar hoje</div>
-<div class="card">Técnicas que deixam seus bolos mais profissionais</div>
-<div class="card">Como vender mesmo começando do zero</div>
-
-</div>
-
-</div>
-
-<!-- PROVA VISUAL -->
-<div class="container section">
-
-<h2>O que você será capaz de fazer</h2>
-
-<div class="carousel">
-<img src="https://i.imgur.com/6MtxiLz.jpeg">
-<img src="https://i.imgur.com/RgOFt3W.jpeg">
-<img src="https://i.imgur.com/RsKrcMV.jpeg">
+<div class="hero-images">
 <img src="https://i.imgur.com/Zy8axIk.jpeg">
+<img src="https://i.imgur.com/k5OFNL5.jpeg">
 </div>
 
 </div>
 
-<!-- DEPOIMENTOS -->
-<div class="container section">
+<!-- BLOCO 2 -->
+<div class="section block fade">
 
-<h2>Pessoas comuns, resultados reais</h2>
+<img src="https://i.imgur.com/6MtxiLz.jpeg">
 
-<div class="grid">
+<div class="block-text">
+<h2>Você não precisa saber nada para começar</h2>
+<p>
+Mesmo sem experiência, você vai aprender passo a passo como produzir bolos que encantam e podem gerar renda.
+</p>
 
-<div class="card testimonial">
-"Comecei sem saber nada e já fiz minhas primeiras vendas em poucas semanas."
-</div>
-
-<div class="card testimonial">
-"Eu achava que não conseguiria, mas o passo a passo é muito simples."
-</div>
-
-<div class="card testimonial">
-"Hoje tenho renda extra só com bolos."
+<a href="https://go.hotmart.com/P104878402Q?ap=3bac" class="btn">Quero aprender</a>
 </div>
 
 </div>
 
+<!-- BLOCO 3 -->
+<div class="section block fade">
+
+<div class="block-text">
+<h2>Transforme isso em renda</h2>
+<p>
+Aprenda não só a fazer bolos, mas também como vender e conquistar clientes.
+</p>
+
+<a href="https://go.hotmart.com/P104878402Q?ap=3bac" class="btn">Quero começar</a>
 </div>
 
-<!-- CTA FINAL -->
-<div class="container section">
-
-<h2>Se você chegou até aqui, talvez seja a sua chance de começar</h2>
-
-<a href="https://go.hotmart.com/P104878402Q?ap=3bac" class="btn">Quero garantir minha vaga</a>
-
-</div>
-
-<!-- FAQ -->
-<div class="container section">
-
-<h2>Perguntas frequentes</h2>
-
-<div class="faq-item">
-<strong>É para iniciantes?</strong>
-<div class="faq-answer">Sim, o conteúdo é pensado para quem está começando.</div>
-</div>
-
-<div class="faq-item">
-<strong>Preciso de experiência?</strong>
-<div class="faq-answer">Não, você aprende desde o básico.</div>
-</div>
-
-<div class="faq-item">
-<strong>Como recebo acesso?</strong>
-<div class="faq-answer">Após a compra, o acesso é enviado automaticamente.</div>
-</div>
+<img src="https://i.imgur.com/RgOFt3W.jpeg">
 
 </div>
 
 <script>
 
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click',()=>{
-    let a=item.querySelector('.faq-answer')
-    a.style.display=a.style.display==='block'?'none':'block'
+/* animação ao rolar */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show')
+    }
   })
+})
+
+document.querySelectorAll('.fade').forEach(el=>{
+  observer.observe(el)
 })
 
 </script>
