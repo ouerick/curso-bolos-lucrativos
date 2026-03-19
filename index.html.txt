@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Online de Bolos Caseiros - Marrara</title>
+  <style>
+    body { margin:0; font-family: 'Arial', sans-serif; background:#fffaf7; color:#333; line-height:1.6; }
+    a { text-decoration:none; }
+    header { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; padding:50px 10%; background:#fff5f5; }
+    header .texto { flex:1; padding-right:20px; }
+    header h1 { font-size:2.8em; color:#d63447; margin-bottom:20px; }
+    header p { font-size:1.2em; margin-bottom:30px; }
+    header .cta { display:inline-block; background:#ff3c3c; color:#fff; padding:18px 40px; font-weight:bold; font-size:1.2em; border-radius:8px; transition:0.3s; }
+    header .cta:hover { background:#e63232; }
+
+    header .video { flex:1; text-align:right; }
+    header video { max-width:100%; border-radius:10px; }
+
+    section { padding:60px 10%; max-width:1200px; margin:0 auto; }
+    section h2 { text-align:center; font-size:2.2em; color:#d63447; margin-bottom:40px; }
+    .benefits { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .benefit { background:#fff; flex:1 1 300px; padding:25px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
+    .benefit:hover { transform: translateY(-5px); }
+    .benefit h3 { color:#d63447; margin-bottom:15px; font-size:1.5em; }
+    .benefit p { font-size:1em; }
+
+    .images-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:40px; }
+    .images-grid img { width:100%; border-radius:10px; }
+
+    .cta-section { text-align:center; margin:60px 0; }
+    .cta-section a { background:#ff3c3c; color:#fff; padding:20px 50px; font-size:1.3em; font-weight:bold; border-radius:8px; transition:0.3s; }
+    .cta-section a:hover { background:#e63232; }
+
+    .faq { max-width:900px; margin:60px auto; }
+    .faq-item { margin-bottom:20px; }
+    .faq-item h4 { font-size:1.2em; color:#d63447; margin-bottom:8px; }
+    .faq-item p { font-size:1em; background:#fff0f0; padding:15px; border-radius:8px; }
+
+    footer { text-align:center; padding:25px 10%; background:#d63447; color:#fff; margin-top:40px; }
+    footer p { margin:0; font-size:1em; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <div class="texto">
+      <h1>Transforme sua paixão por bolos em lucro real!</h1>
+      <p>Aprenda técnicas profissionais de bolos caseiros e comece a vender com lucro. Curso passo a passo para iniciantes e avançados.</p>
+      <a class="cta" href="https://go.hotmart.com/P104878402Q?ap=3bac">Quero me inscrever agora</a>
+    </div>
+    <div class="video">
+      <video src="https://imgur.com/JnZLcd2.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </header>
+
+  <!-- Benefícios -->
+  <section>
+    <h2>O que você vai aprender</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>Bolos Decorados Profissionais</h3>
+        <p>Aprenda técnicas que deixam seus bolos irresistíveis e com aparência de confeitaria premium.</p>
+      </div>
+      <div class="benefit">
+        <h3>Receitas Lucrativas</h3>
+        <p>Receitas testadas para que você consiga vender com margem de lucro real.</p>
+      </div>
+      <div class="benefit">
+        <h3>Venda Online e Presencial</h3>
+        <p>Estratégias para você vender seus bolos em redes sociais e presencialmente, sem complicações.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imagens promocionais -->
+  <section>
+    <h2>Veja alguns dos bolos que você vai aprender a fazer</h2>
+    <div class="images-grid">
+      <img src="https://imgur.com/6MtxiLz" alt="Bolo 1">
+      <img src="https://imgur.com/RgOFt3W" alt="Bolo 2">
+      <img src="https://imgur.com/RsKrcMV" alt="Bolo 3">
+      <img src="https://i.imgur.com/Zy8axIk.jpeg" alt="Bolo 4">
+      <img src="https://imgur.com/k5OFNL5" alt="Bolo 5">
+      <img src="https://imgur.com/riTRLbz" alt="Bolo 6">
+      <img src="https://imgur.com/moRWfB9" alt="Bolo 7">
+      <img src="https://imgur.com/M61kZDb" alt="Bolo 8">
+      <img src="https://imgur.com/g0mUNPA" alt="Bolo 9">
+      <img src="https://imgur.com/75G4h4T" alt="Bolo 10">
+    </div>
+  </section>
+
+  <!-- CTA principal -->
+  <section class="cta-section">
+    <h2>Garanta sua vaga no curso agora!</h2>
+    <p>Curso completo + material bônus exclusivo.</p>
+    <a href="https://go.hotmart.com/P104878402Q?ap=3bac">Comprar Agora</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-item">
+      <h4>Não tenho experiência, consigo aprender?</h4>
+      <p>Sim! O curso é passo a passo, ideal para iniciantes e quem quer aprimorar técnicas.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Quanto tempo preciso dedicar por dia?</h4>
+      <p>Aulas curtas que podem ser assistidas em qualquer horário, conforme sua disponibilidade.</p>
+    </div>
+    <div class="faq-item">
+      <h4>E se eu não gostar do curso?</h4>
+      <p>Garantia de 7 dias. Se não estiver satisfeito, devolvemos 100% do seu dinheiro.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Preciso comprar materiais específicos?</h4>
+      <p>O curso utiliza materiais simples de confeitaria que podem ser encontrados em qualquer cidade.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Curso de Bolos Caseiros - Marrara. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
